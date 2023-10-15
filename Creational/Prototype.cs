@@ -1,3 +1,5 @@
+using System;
+
 namespace DesignPatterns.Creational.Prototype;
 
 class Sheep

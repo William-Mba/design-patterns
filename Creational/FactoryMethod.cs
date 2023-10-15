@@ -1,3 +1,5 @@
+using System;
+
 namespace DesignPatterns.Creational.FactoryMethod;
 
 interface IInterviewer
@@ -5,7 +7,7 @@ interface IInterviewer
     void AskQuestions();
 }
 
-class Developper : IInterviewer
+class Developer : IInterviewer
 {
     public void AskQuestions()
     {
@@ -33,11 +35,11 @@ abstract class HiringManager
     }
 }
 
-class DeveloppementManager: HiringManager
+class DevelopementManager: HiringManager
 {
     protected override IInterviewer MakeInterviewer()
     {
-        return new Developper();
+        return new Developer();
     }
 }
 
